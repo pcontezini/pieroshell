@@ -1,5 +1,0 @@
-8a26d3d6cfa2a602a4cc983a73eead84 bb38d28564dd41c09d3558fcacc0bc7d ffffffffffffffffffffffffffffffff 4555684 /Users/pcontezini/devel/psh/v8/tools/../xcodebuild/Debug/v8_shell
-000000000000000100000000000047fa b685951239d4ec259307460a45737296 ffffffffffffffffffffffffffffffff 95496 /Users/pcontezini/devel/psh/v8/tools/../xcodebuild/v8.build/Debug/d8_shell.build/Objects-normal/i386/d8-posix.o
-00000000000000000000000000000000 570639ace1d91f1b129789d3ec3f7f56 ffffffffffffffffffffffffffffffff 41948 /Users/pcontezini/devel/psh/v8/tools/../xcodebuild/v8.build/Debug/d8_shell.build/Objects-normal/i386/d8-js.o
-000000004a3bc40000000000000190dd 0b80d13421848334f9d6611bebedc271 ffffffffffffffffffffffffffffffff 62756 /Users/pcontezini/devel/psh/v8/tools/../xcodebuild/v8.build/Debug/d8_shell.build/Objects-normal/i386/d8-debug.o
-0000000048dc7f8d000000000000c906 6025ae5c7ef7a8aedc8a36f830b048e0 ffffffffffffffffffffffffffffffff 396016 /Users/pcontezini/devel/psh/v8/tools/../xcodebuild/v8.build/Debug/d8_shell.build/Objects-normal/i386/d8.o

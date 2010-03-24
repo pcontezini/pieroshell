@@ -11,7 +11,6 @@
 		C2021ECD0FEEA68E008B4C90 /* ClassProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2021ECC0FEEA68E008B4C90 /* ClassProxy.cpp */; };
 		C2021F3A0FEEC9ED008B4C90 /* DummyTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */; };
 		C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20943CB101BEED4009442ED /* HTTPClient.cpp */; };
-		C2094416101BF608009442ED /* libcurl.4.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2094415101BF608009442ED /* libcurl.4.1.1.dylib */; };
 		C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22393E41016822900C73EC8 /* XMLElementVector.cpp */; };
 		C274AC640FED355C00E936CC /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C274AC630FED355C00E936CC /* libv8.a */; };
 		C274AC6C0FED36C600E936CC /* shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274AC6B0FED36C600E936CC /* shell.cpp */; };
@@ -19,6 +18,7 @@
 		C274ACC40FED591C00E936CC /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274ACC30FED591C00E936CC /* File.cpp */; };
 		C27C78DA0FFEBA8D00CFCF6A /* libpdom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */; };
 		C27F0480100EA31E001C5302 /* XMLElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C27F047F100EA31E001C5302 /* XMLElement.cpp */; };
+		C2A3A66D10B8A27C008D8515 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */; };
 		C2AFE6580FF41E1200919DF3 /* TemplateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2AFE6570FF41E1200919DF3 /* TemplateManager.cpp */; };
 		C2C9361A0FF195D0006828D8 /* XML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C936190FF195D0006828D8 /* XML.cpp */; };
 		C2DC46E1101137C100FB56A7 /* XMLAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2DC46E0101137C100FB56A7 /* XMLAttribute.cpp */; };
@@ -45,7 +45,6 @@
 		C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DummyTest.cpp; sourceTree = "<group>"; };
 		C20943CA101BEED4009442ED /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		C20943CB101BEED4009442ED /* HTTPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPClient.cpp; sourceTree = "<group>"; };
-		C2094415101BF608009442ED /* libcurl.4.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.1.1.dylib; path = /usr/local/lib/libcurl.4.1.1.dylib; sourceTree = "<absolute>"; };
 		C22393E31016822900C73EC8 /* XMLElementVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElementVector.h; sourceTree = "<group>"; };
 		C22393E41016822900C73EC8 /* XMLElementVector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLElementVector.cpp; sourceTree = "<group>"; };
 		C274AC630FED355C00E936CC /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = v8/xcodebuild/Debug/libv8.a; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpdom.dylib; path = ../pdom/libpdom.dylib; sourceTree = SOURCE_ROOT; };
 		C27F047E100EA31E001C5302 /* XMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElement.h; sourceTree = "<group>"; };
 		C27F047F100EA31E001C5302 /* XMLElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLElement.cpp; sourceTree = "<group>"; };
+		C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = usr/lib/libcurl.4.dylib; sourceTree = SDKROOT; };
 		C2AFE6560FF41E1200919DF3 /* TemplateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateManager.h; sourceTree = "<group>"; };
 		C2AFE6570FF41E1200919DF3 /* TemplateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TemplateManager.cpp; sourceTree = "<group>"; };
 		C2C936180FF195D0006828D8 /* XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XML.h; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			files = (
 				C274AC640FED355C00E936CC /* libv8.a in Frameworks */,
 				C27C78DA0FFEBA8D00CFCF6A /* libpdom.dylib in Frameworks */,
-				C2094416101BF608009442ED /* libcurl.4.1.1.dylib in Frameworks */,
+				C2A3A66D10B8A27C008D8515 /* libcurl.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,13 +118,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C2E2A8450FF03D300066E949 /* Bindings */ = {
+		C2A3A68010B8A34A008D8515 /* pDOM */ = {
 			isa = PBXGroup;
 			children = (
-				C2021F380FEEC9ED008B4C90 /* DummyTest.h */,
-				C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */,
-				C274ACC20FED591C00E936CC /* File.h */,
-				C274ACC30FED591C00E936CC /* File.cpp */,
 				C2C936180FF195D0006828D8 /* XML.h */,
 				C2C936190FF195D0006828D8 /* XML.cpp */,
 				C27F047E100EA31E001C5302 /* XMLElement.h */,
@@ -133,8 +129,44 @@
 				C2DC46E0101137C100FB56A7 /* XMLAttribute.cpp */,
 				C22393E31016822900C73EC8 /* XMLElementVector.h */,
 				C22393E41016822900C73EC8 /* XMLElementVector.cpp */,
+			);
+			name = pDOM;
+			sourceTree = "<group>";
+		};
+		C2A3A68E10B8A45C008D8515 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				C274ACC20FED591C00E936CC /* File.h */,
+				C274ACC30FED591C00E936CC /* File.cpp */,
+			);
+			name = OS;
+			sourceTree = "<group>";
+		};
+		C2A3A68F10B8A467008D8515 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				C20943CA101BEED4009442ED /* HTTPClient.h */,
 				C20943CB101BEED4009442ED /* HTTPClient.cpp */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		C2A3A69410B8A823008D8515 /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Databases;
+			sourceTree = "<group>";
+		};
+		C2E2A8450FF03D300066E949 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				C2A3A69410B8A823008D8515 /* Databases */,
+				C2A3A68F10B8A467008D8515 /* Network */,
+				C2A3A68E10B8A45C008D8515 /* OS */,
+				C2A3A68010B8A34A008D8515 /* pDOM */,
+				C2021F380FEEC9ED008B4C90 /* DummyTest.h */,
+				C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */,
 			);
 			name = Bindings;
 			sourceTree = "<group>";
@@ -142,9 +174,9 @@
 		C2E2A8460FF03D370066E949 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				C2094415101BF608009442ED /* libcurl.4.1.1.dylib */,
 				C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */,
 				C274AC630FED355C00E936CC /* libv8.a */,
+				C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
