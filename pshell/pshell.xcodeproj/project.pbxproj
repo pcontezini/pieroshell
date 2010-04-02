@@ -253,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "${BUILD_DIR}";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -269,6 +270,7 @@
 					"\"$(SRCROOT)/../pdom\"",
 				);
 				PRODUCT_NAME = pshell;
+				SYMROOT = "${PROJECT_DIR}";
 			};
 			name = Debug;
 		};
@@ -292,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "${PROJECT_PATH}";
 				FRAMEWORK_SEARCH_PATHS = "~/devel/pdom//**";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -302,7 +305,9 @@
 					../pdom,
 				);
 				LD_RUNPATH_SEARCH_PATHS = "~/devel/pdom";
+				OBJROOT = "$(PROJECT_DIR)/build";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-Lv8";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};
