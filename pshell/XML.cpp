@@ -54,7 +54,7 @@ XML::XML(): DomTree("", "UTF-8", "1.0") {
 
 Handle<Object> XML::GetChildren(const Arguments& args) {
 	HandleScope scope;
-	printf("XML::GetChildren()::elements.size(): %d\n", getChildren().size());
+//	printf("XML::GetChildren()::elements.size(): %d\n", getChildren().size());
 	XMLElementVector *newVector = new XMLElementVector(getChildren());
 	Handle<Object> newObject = newVector->registerObject();
 	return(scope.Close(newObject));	
@@ -170,4 +170,31 @@ XMLElement *XML::newElement(std::string name) {
 	pushElement(new_element);
 	return(new_element);
 }	
+
+void XML::parseChildren(xmlDocPtr doc, xmlNodePtr child, DomElement *parent) {
+	xmlNode *cur_node = NULL;
+	XMLElement *new_element;
+	xmlAttrPtr attr;
+		
+	for(cur_node = child ; cur_node ; cur_node = cur_node->next ) {
+		if( cur_node->type == XML_ELEMENT_NODE) {
+			if(!parent) {
+				new_element = newElement((char *)cur_node->name);
+			} else {
+				new_element = (XMLElement *)parent->newElement((char *)cur_node->name);
+			}
+		} else if (cur_node->type == XML_TEXT_NODE && xmlIsBlankNode(cur_node)==0) {
+			parent->setValue((char *)cur_node->content);
+		}
+		parseChildren(doc,cur_node->children,new_element);
+		attr = cur_node->properties;
+		while(attr) {
+			std::string name = (char *)attr->name;
+			std::string value = (char *)attr->children->content;
+			new_element->setAttribute(name,value);
+			attr = attr->next;
+		}
+	}
+}	
+
 

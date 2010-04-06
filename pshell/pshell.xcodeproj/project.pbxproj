@@ -18,6 +18,7 @@
 		C274ACC40FED591C00E936CC /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274ACC30FED591C00E936CC /* File.cpp */; };
 		C27C78DA0FFEBA8D00CFCF6A /* libpdom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */; };
 		C27F0480100EA31E001C5302 /* XMLElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C27F047F100EA31E001C5302 /* XMLElement.cpp */; };
+		C281DDF0116AE41200F6D8A6 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C281DDEF116AE41200F6D8A6 /* libxml2.2.dylib */; };
 		C2A3A66D10B8A27C008D8515 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */; };
 		C2AFE6580FF41E1200919DF3 /* TemplateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2AFE6570FF41E1200919DF3 /* TemplateManager.cpp */; };
 		C2C9361A0FF195D0006828D8 /* XML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C936190FF195D0006828D8 /* XML.cpp */; };
@@ -58,6 +59,7 @@
 		C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpdom.dylib; path = ../pdom/libpdom.dylib; sourceTree = SOURCE_ROOT; };
 		C27F047E100EA31E001C5302 /* XMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElement.h; sourceTree = "<group>"; };
 		C27F047F100EA31E001C5302 /* XMLElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLElement.cpp; sourceTree = "<group>"; };
+		C281DDEF116AE41200F6D8A6 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = usr/lib/libcurl.4.dylib; sourceTree = SDKROOT; };
 		C2AFE6560FF41E1200919DF3 /* TemplateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateManager.h; sourceTree = "<group>"; };
 		C2AFE6570FF41E1200919DF3 /* TemplateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TemplateManager.cpp; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				C274AC640FED355C00E936CC /* libv8.a in Frameworks */,
 				C27C78DA0FFEBA8D00CFCF6A /* libpdom.dylib in Frameworks */,
 				C2A3A66D10B8A27C008D8515 /* libcurl.4.dylib in Frameworks */,
+				C281DDF0116AE41200F6D8A6 /* libxml2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +180,7 @@
 				C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */,
 				C274AC630FED355C00E936CC /* libv8.a */,
 				C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */,
+				C281DDEF116AE41200F6D8A6 /* libxml2.2.dylib */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";

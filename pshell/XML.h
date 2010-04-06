@@ -63,7 +63,8 @@ public:
 	Handle<Value> Parse(const Arguments& args);
 	
 	Handle<Value> ElementExist(const Arguments& args);
-	
+
+	void parseChildren(xmlDocPtr doc, xmlNodePtr child, DomElement *parent);
 	
 	Handle<String> getClassName();
 	void registerCallbacks();
