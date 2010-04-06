@@ -28,6 +28,15 @@ v8::Handle<v8::String> ReadFile(const char* name) {
 	
 	char* chars = new char[size + 1];
 	chars[size] = '\0';
+	if (size) {
+		fgets(chars, size, file);
+		if (chars[0] == '#') {
+			size-=strlen(chars)+1;
+		} else {
+			rewind(file);
+		}
+
+	}
 	for (int i = 0; i < size;) {
 		int read = fread(&chars[i], 1, size - i, file);
 		i += read;
