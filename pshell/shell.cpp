@@ -101,6 +101,7 @@ void Shell::RunShell(v8::Handle<v8::Context> context) {
 		printf("%s ",prompt.c_str());
 		char* str = fgets(buffer, kBufferSize, stdin);
 		if (str == NULL) break;
+		if (str[0] == '#') break;
 		HandleScope handle_scope;
 		ExecuteString(String::New(str),
 					  String::New("(shell)"),
