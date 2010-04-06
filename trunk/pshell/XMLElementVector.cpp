@@ -17,10 +17,11 @@ Handle<String> XMLElementVector::getClassName() {
 
 XMLElementVector::XMLElementVector(vector<DomElement *> &elementVector) {
 	HandleScope scope;
-	elementVector = elementVector;
+	this->elementVector = elementVector;
+	printf("XMLElementVector:: elementVector.size(): %d\n", elementVector.size());
 	Handle<String> teste = String::New("teste");
 	registerIndexedProperty(getElement,setElement);
-	printf("XMLElementVector::XMLElementVector\n");
+	printf("XMLElementVector::XMLElementVector %x\n", this);
 }
 
 XMLElementVector* XMLElementVector::unwrapElementVector(const AccessorInfo& info) {
@@ -33,8 +34,9 @@ XMLElementVector* XMLElementVector::unwrapElementVector(const AccessorInfo& info
 
 Handle<Value> XMLElementVector::getElement(uint32_t index, const AccessorInfo& info) {
 	HandleScope scope;
-	printf("chama getElement??\n");
+
 	XMLElementVector *myPointer = unwrapElementVector(info);
+	printf("chama getElement?? %x %d\n", myPointer, myPointer->elementVector.size());	
 	if(index >= myPointer->elementVector.size()) {
 		return v8::ThrowException(v8::String::New("Index size invalid"));
 	}

@@ -182,14 +182,14 @@ Handle<Value> loadXML(const v8::Arguments& args) {
 	if(!args.IsConstructCall()) {
 		return v8::ThrowException(String::New("Cannot call constructor as a function"));
 	}
-	if (args.Length() != 1) {
+/*	if (args.Length() != 1) {
 		return v8::ThrowException(v8::String::New("Bad parameters"));
-	}
+	} */
 	HandleScope scope;	
 	
 	Shell *shell = Shell::Instance();
 	Context::Scope context_scope(shell->globalContext);
-	XML *newXML = new XML(*String::Utf8Value(args[0]));
+	XML *newXML = new XML();
 	return(scope.Close(newXML->registerObject()));
 }
 

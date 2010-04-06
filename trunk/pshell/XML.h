@@ -19,7 +19,7 @@
 
 class XML : public ClassProxy, DomTree {
 public:
-	XML(std::string file);
+	XML();
 	
 	XMLElement *newElement(std::string name);
 	

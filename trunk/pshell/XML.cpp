@@ -48,13 +48,14 @@ void XML::registerCallbacks() {
 	registerFunction("getChild",GETCLASSPROXYCALLBACK(XML,GetChild));
 }
 
-XML::XML(std::string file): DomTree(file, "UTF-8", "1.0") {
+XML::XML(): DomTree("", "UTF-8", "1.0") {
 	registerCallbacks();
 }
 
 Handle<Object> XML::GetChildren(const Arguments& args) {
 	HandleScope scope;
-	XMLElementVector *newVector = new XMLElementVector(elements);
+	printf("XML::GetChildren()::elements.size(): %d\n", getChildren().size());
+	XMLElementVector *newVector = new XMLElementVector(getChildren());
 	Handle<Object> newObject = newVector->registerObject();
 	return(scope.Close(newObject));	
 }
@@ -88,6 +89,7 @@ Handle<Value> XML::Load(const Arguments& args) {
 	if(!load(file)) {
 		return v8::ThrowException(v8::String::New("Error Loading XML"));
 	}
+	// registrar todos os membros do XML para o contexto da V8!!
 	Handle<Boolean> success = Boolean::New(true);
 	return(scope.Close(success));	
 }
