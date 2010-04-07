@@ -1,6 +1,7 @@
 myXML = new XML();
 print("creating XML");
 myXML.setName("test");
+myXML.setAttribute("firstAttribute","firstAttributeValue");
 firstElement = myXML.newElement("firstElement");
 firstElement.setValue("firstElementValue");
 firstElement.setAttribute("firstAttribute","firstAttributeValue");
@@ -11,6 +12,11 @@ print("elementCount: " + myXML.getChildrenCount());
 vector = myXML.getChildren();
 for(i = 0; i <  myXML.getChildrenCount(); i++) {
 	print("elementName: " + vector[i].getName() + " elementvalue: " + vector[i].getValue());
+}
+attrVector = myXML.getAttributes();
+print("attributeCount: " + myXML.getAttributeCount());
+for(a = 0; a < myXML.getAttributeCount(); a++) {
+	print("attributeName: " + attrVector[a].getName() + " attributevalue: " + attrVector[a].getValue());
 }
 
 myXML.write("test.xml");

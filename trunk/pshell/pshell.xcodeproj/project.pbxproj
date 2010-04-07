@@ -12,6 +12,7 @@
 		C2021F3A0FEEC9ED008B4C90 /* DummyTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */; };
 		C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20943CB101BEED4009442ED /* HTTPClient.cpp */; };
 		C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22393E41016822900C73EC8 /* XMLElementVector.cpp */; };
+		C2555251116C00DD004E7B76 /* XMLAttributeVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */; };
 		C274AC640FED355C00E936CC /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C274AC630FED355C00E936CC /* libv8.a */; };
 		C274AC6C0FED36C600E936CC /* shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274AC6B0FED36C600E936CC /* shell.cpp */; };
 		C274AC740FED3D6500E936CC /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274AC730FED3D6500E936CC /* GlobalFunctions.cpp */; };
@@ -48,6 +49,8 @@
 		C20943CB101BEED4009442ED /* HTTPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPClient.cpp; sourceTree = "<group>"; };
 		C22393E31016822900C73EC8 /* XMLElementVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElementVector.h; sourceTree = "<group>"; };
 		C22393E41016822900C73EC8 /* XMLElementVector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLElementVector.cpp; sourceTree = "<group>"; };
+		C255524F116C00DD004E7B76 /* XMLAttributeVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLAttributeVector.h; sourceTree = "<group>"; };
+		C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLAttributeVector.cpp; sourceTree = "<group>"; };
 		C274AC630FED355C00E936CC /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = v8/xcodebuild/Debug/libv8.a; sourceTree = "<group>"; };
 		C274AC6A0FED36C600E936CC /* shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shell.h; sourceTree = "<group>"; };
 		C274AC6B0FED36C600E936CC /* shell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shell.cpp; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				C2DC46E0101137C100FB56A7 /* XMLAttribute.cpp */,
 				C22393E31016822900C73EC8 /* XMLElementVector.h */,
 				C22393E41016822900C73EC8 /* XMLElementVector.cpp */,
+				C255524F116C00DD004E7B76 /* XMLAttributeVector.h */,
+				C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */,
 			);
 			name = pDOM;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				C2DC46E1101137C100FB56A7 /* XMLAttribute.cpp in Sources */,
 				C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */,
 				C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */,
+				C2555251116C00DD004E7B76 /* XMLAttributeVector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +317,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "~/devel/pdom";
 				OBJROOT = "$(PROJECT_DIR)/build";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-Lv8";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-ggdb3",
+					"$(OTHER_CFLAGS)",
+				);
+				OTHER_LDFLAGS = (
+					"-ggdb3",
+					"-Lv8",
+				);
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};
