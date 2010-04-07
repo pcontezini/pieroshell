@@ -9,19 +9,27 @@
 
 #include "XML.h"
 #include "XMLElementVector.h"
+#include "XMLAttributeVector.h"
 
 CLASSPROXYCALLBACK(XML,Load);
 CLASSPROXYCALLBACK(XML,Parse);
 
 CLASSPROXYCALLBACK(XML,GetName);
 CLASSPROXYCALLBACK(XML,SetName);
-CLASSPROXYCALLBACK(XML,GetChildren);
-CLASSPROXYCALLBACK(XML,DumpTree);
 
+CLASSPROXYCALLBACK(XML,GetChildrenCount);
+CLASSPROXYCALLBACK(XML,GetChildren);
+CLASSPROXYCALLBACK(XML,GetAttributeCount);
+CLASSPROXYCALLBACK(XML,GetAttributes);
+CLASSPROXYCALLBACK(XML,SetAttribute);
+
+CLASSPROXYCALLBACK(XML,DumpTree);
 CLASSPROXYCALLBACK(XML,Write);
 CLASSPROXYCALLBACK(XML,NewElement);
-CLASSPROXYCALLBACK(XML,GetChildrenCount);
+
 CLASSPROXYCALLBACK(XML,GetChild);
+
+
 
 Handle<String> XML::getClassName() {
 	HandleScope scope;
@@ -45,11 +53,22 @@ void XML::registerCallbacks() {
 	
 	registerFunction("getChildren",GETCLASSPROXYCALLBACK(XML,GetChildren));
 	registerFunction("getChildrenCount",GETCLASSPROXYCALLBACK(XML,GetChildrenCount));
+
+	registerFunction("getAttributes",GETCLASSPROXYCALLBACK(XML,GetAttributes));
+	registerFunction("getAttributeCount",GETCLASSPROXYCALLBACK(XML,GetAttributeCount));
+	registerFunction("setAttribute",GETCLASSPROXYCALLBACK(XML,SetAttribute));
+	
 	registerFunction("getChild",GETCLASSPROXYCALLBACK(XML,GetChild));
 }
 
 XML::XML(): DomTree("", "UTF-8", "1.0") {
 	registerCallbacks();
+}
+
+Handle<Value> XML::GetChildrenCount(const Arguments& args) {
+	HandleScope scope;
+	Handle<Integer> count = Integer::New(getChildrenCount());
+	return(scope.Close(count));
 }
 
 Handle<Object> XML::GetChildren(const Arguments& args) {
@@ -59,6 +78,22 @@ Handle<Object> XML::GetChildren(const Arguments& args) {
 	Handle<Object> newObject = newVector->registerObject();
 	return(scope.Close(newObject));	
 }
+
+Handle<Value> XML::GetAttributeCount(const Arguments& args) {
+	HandleScope scope;
+	Handle<Integer> count = Integer::New(getAttributes().size());
+	return(scope.Close(count));
+}
+
+
+Handle<Object> XML::GetAttributes(const Arguments& args) {
+	HandleScope scope;
+	XMLAttributeVector *newVector = new XMLAttributeVector(getAttributes());
+	Handle<Object> newObject = newVector->registerObject();
+	return(scope.Close(newObject));	
+}
+
+
 
 Handle<Value> XML::GetName(const Arguments& args) {
 	HandleScope scope;
@@ -77,6 +112,27 @@ Handle<Value> XML::SetName(const Arguments& args) {
 	setName(name);
 	Handle<Boolean> success = Boolean::New(true);
 	return(scope.Close(success)); // aqui nao sei como retornar um "nada"
+}
+
+Handle<Value> XML::SetAttribute(const Arguments& args) {
+	HandleScope scope;
+	if (args.Length() != 2) {
+		return v8::ThrowException(v8::String::New("Need Parameters"));
+	}	
+	Handle<Value> arg0 = args[0];
+	String::Utf8Value value0(arg0);
+	std::string attributeName = *value0;	
+	setName(attributeName);
+	
+	Handle<Value> arg1 = args[1];
+	String::Utf8Value value1(arg1);
+	std::string attributeValue = *value1;	
+	
+	setAttribute(attributeName,attributeValue);
+
+	Handle<Boolean> success = Boolean::New(true);
+	return(scope.Close(success)); // aqui nao sei como retornar um "nada"
+	
 }
 
 
@@ -148,11 +204,6 @@ Handle<Value> XML::NewElement(const Arguments& args) {
 	return(scope.Close(newObject));
 }
 
-Handle<Value> XML::GetChildrenCount(const Arguments& args) {
-	HandleScope scope;
-	Handle<Integer> count = Integer::New(getChildrenCount());
-	return(scope.Close(count));
-}
 
 Handle<Object> XML::GetChild(const Arguments& args) {
 	HandleScope scope;
@@ -197,4 +248,16 @@ void XML::parseChildren(xmlDocPtr doc, xmlNodePtr child, DomElement *parent) {
 	}
 }	
 
+DomAttribute *XML::setAttribute(const std::string& name, const std::string& value) {
+	XMLAttribute *new_attribute;
+	if(name.empty()) {
+		return(new_attribute);
+	}
+		
+	new_attribute = new XMLAttribute(name,value);
+//	attributes.push_back((DomAttribute *)new_attribute); // BUG
+	attributes.push_back(dynamic_cast<DomAttribute *>(new_attribute));
+	return((DomAttribute *)new_attribute);
+}
+	
 

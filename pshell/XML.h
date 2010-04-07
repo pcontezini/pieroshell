@@ -24,12 +24,17 @@ public:
 	XMLElement *newElement(std::string name);
 	
 	Handle<Object> GetChildren(const Arguments& args);
+	Handle<Value> GetChildrenCount(const Arguments& args);
+	
+	Handle<Value> GetAttributeCount(const Arguments& args);
+	Handle<Object> GetAttributes(const Arguments& args);	
+	
 	Handle<Object> GetElements(const Arguments& args);
 	Handle<Value> SetChildren(const Arguments& args);
 	Handle<Value> SetElements(const Arguments& args);
 	Handle<Value> RemoveElements(const Arguments& args);
 	
-	Handle<Value> GetChildrenCount(const Arguments& args);
+	
 	Handle<Object> GetChild(const Arguments& args);
 	
 	
@@ -38,11 +43,11 @@ public:
 	
 	Handle<Value> HasChildNodes();
 	
-	Handle<Object> GetAttributes(const Arguments& args);
+//	Handle<Object> GetAttributes(const Arguments& args);
 	Handle<Value> SetAttributes(const Arguments& args);
 	Handle<Value> RemoveAttributes(const Arguments& args);
 	
-	Handle<Object> SetAttribute(const Arguments& args);
+	Handle<Value> SetAttribute(const Arguments& args);
 
 	Handle<Value> GetName(const Arguments& args);
 	Handle<Value> SetName(const Arguments& args);
@@ -65,6 +70,7 @@ public:
 	Handle<Value> ElementExist(const Arguments& args);
 
 	void parseChildren(xmlDocPtr doc, xmlNodePtr child, DomElement *parent);
+	DomAttribute *setAttribute(const std::string& name, const std::string& value);
 	
 	Handle<String> getClassName();
 	void registerCallbacks();
