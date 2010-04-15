@@ -12,6 +12,9 @@
 		C2021F3A0FEEC9ED008B4C90 /* DummyTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */; };
 		C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20943CB101BEED4009442ED /* HTTPClient.cpp */; };
 		C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22393E41016822900C73EC8 /* XMLElementVector.cpp */; };
+		C22EA89E1176B28A00CB414C /* basic.js in Sources */ = {isa = PBXBuildFile; fileRef = C22EA89A1176B28A00CB414C /* basic.js */; };
+		C22EA89F1176B28A00CB414C /* httpclient.js in Sources */ = {isa = PBXBuildFile; fileRef = C22EA89B1176B28A00CB414C /* httpclient.js */; };
+		C22EA8A01176B28A00CB414C /* pdom.js in Sources */ = {isa = PBXBuildFile; fileRef = C22EA89C1176B28A00CB414C /* pdom.js */; };
 		C2555251116C00DD004E7B76 /* XMLAttributeVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */; };
 		C274AC640FED355C00E936CC /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C274AC630FED355C00E936CC /* libv8.a */; };
 		C274AC6C0FED36C600E936CC /* shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274AC6B0FED36C600E936CC /* shell.cpp */; };
@@ -49,6 +52,11 @@
 		C20943CB101BEED4009442ED /* HTTPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPClient.cpp; sourceTree = "<group>"; };
 		C22393E31016822900C73EC8 /* XMLElementVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElementVector.h; sourceTree = "<group>"; };
 		C22393E41016822900C73EC8 /* XMLElementVector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLElementVector.cpp; sourceTree = "<group>"; };
+		C22EA8991176B28100CB414C /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = test.xml; path = tests/test.xml; sourceTree = "<group>"; };
+		C22EA89A1176B28A00CB414C /* basic.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = basic.js; path = tests/basic.js; sourceTree = "<group>"; };
+		C22EA89B1176B28A00CB414C /* httpclient.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = httpclient.js; path = tests/httpclient.js; sourceTree = "<group>"; };
+		C22EA89C1176B28A00CB414C /* pdom.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = pdom.js; path = tests/pdom.js; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		C22EA89D1176B28A00CB414C /* test.cgi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.cgi; path = tests/test.cgi; sourceTree = "<group>"; };
 		C255524F116C00DD004E7B76 /* XMLAttributeVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLAttributeVector.h; sourceTree = "<group>"; };
 		C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLAttributeVector.cpp; sourceTree = "<group>"; };
 		C274AC630FED355C00E936CC /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = v8/xcodebuild/Debug/libv8.a; sourceTree = "<group>"; };
@@ -124,9 +132,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C22EA8901176B24A00CB414C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C22EA89A1176B28A00CB414C /* basic.js */,
+				C22EA89B1176B28A00CB414C /* httpclient.js */,
+				C22EA89C1176B28A00CB414C /* pdom.js */,
+				C22EA89D1176B28A00CB414C /* test.cgi */,
+				C22EA8991176B28100CB414C /* test.xml */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		C22EA9041176B6C500CB414C /* BeerSoap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BeerSoap;
+			sourceTree = "<group>";
+		};
 		C2A3A68010B8A34A008D8515 /* pDOM */ = {
 			isa = PBXGroup;
 			children = (
+				C22EA8901176B24A00CB414C /* Tests */,
 				C2C936180FF195D0006828D8 /* XML.h */,
 				C2C936190FF195D0006828D8 /* XML.cpp */,
 				C27F047E100EA31E001C5302 /* XMLElement.h */,
@@ -169,6 +197,7 @@
 		C2E2A8450FF03D300066E949 /* Bindings */ = {
 			isa = PBXGroup;
 			children = (
+				C22EA9041176B6C500CB414C /* BeerSoap */,
 				C2A3A69410B8A823008D8515 /* Databases */,
 				C2A3A68F10B8A467008D8515 /* Network */,
 				C2A3A68E10B8A45C008D8515 /* OS */,
@@ -253,6 +282,9 @@
 				C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */,
 				C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */,
 				C2555251116C00DD004E7B76 /* XMLAttributeVector.cpp in Sources */,
+				C22EA89E1176B28A00CB414C /* basic.js in Sources */,
+				C22EA89F1176B28A00CB414C /* httpclient.js in Sources */,
+				C22EA8A01176B28A00CB414C /* pdom.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

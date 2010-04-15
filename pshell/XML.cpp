@@ -249,14 +249,17 @@ void XML::parseChildren(xmlDocPtr doc, xmlNodePtr child, DomElement *parent) {
 }	
 
 DomAttribute *XML::setAttribute(const std::string& name, const std::string& value) {
-	XMLAttribute *new_attribute;
+	XMLAttribute *new_attribute = NULL;
 	if(name.empty()) {
 		return(new_attribute);
 	}
-		
+
+//	std::cout << __func__ << ": " << name << " "  << value << std::endl;	
 	new_attribute = new XMLAttribute(name,value);
+//	printf("aqui\n");
 //	attributes.push_back((DomAttribute *)new_attribute); // BUG
 	attributes.push_back(dynamic_cast<DomAttribute *>(new_attribute));
+//	printf("ali\n");	
 	return((DomAttribute *)new_attribute);
 }
 	

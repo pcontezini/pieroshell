@@ -9,7 +9,7 @@ secondElement = myXML.newElement("secondElement");
 secondElement.setValue("secondElementValue");
 secondElement.setAttribute("secondAttribute","secondAttributeValue");
 print("elementCount: " + myXML.getChildrenCount());
-vector = myXML.getChildren();
+vector = myXML.getChildren(); // falta o size
 for(i = 0; i <  myXML.getChildrenCount(); i++) {
 	print("elementName: " + vector[i].getName() + " elementvalue: " + vector[i].getValue());
 }
@@ -33,4 +33,10 @@ loadedVector = myLoadedXML.getChildren();
 print("ChildrenCount: " + myLoadedXML.getChildrenCount());
 for(i = 0; i < myLoadedXML.getChildrenCount(); i++) {
 	print("elementName: " + loadedVector[i].getName() + "elementvalue: " + loadedVector[i].getValue());
+}
+
+attrVector = myLoadedXML.getAttributes();
+print("attributeCount: " + myLoadedXML.getAttributeCount());
+for(a = 0; a < myLoadedXML.getAttributeCount(); a++) {
+	print("attributeName: " + attrVector[a].getName() + " attributevalue: " + attrVector[a].getValue());
 }
