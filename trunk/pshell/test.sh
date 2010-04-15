@@ -1,0 +1,2 @@
+#!./pshell
+print("hello world");
