@@ -25,6 +25,17 @@ Handle<Value> returnValue = static_cast<proxyclass*>(ptr)->function(args); \
 return scope.Close(returnValue); \
 }
 
+#define CLASSPROXYCALLBACKOBJECT(proxyclass,function) \
+static Handle<Object> proxyclass##function##CallBack(const Arguments& args) { \
+HandleScope scope; \
+Local<Object> self = args.Holder(); \
+Local<External> wrap = Local<External>::Cast(self->GetInternalField(0)); \
+proxyclass* ptr = (proxyclass*)wrap->Value(); \
+Handle<Object> returnValue = static_cast<proxyclass*>(ptr)->function(args); \
+return scope.Close(returnValue); \
+}
+
+
 #define GETCLASSPROXYCALLBACK(proxyclass,function) proxyclass##function##CallBack
 
 

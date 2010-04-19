@@ -31,6 +31,7 @@ Shell::Shell() {
 	
 	global->Set(String::New("XML"), FunctionTemplate::New(loadXML));
 	global->Set(String::New("HTTPClient"), FunctionTemplate::New(loadHTTPClient));
+	global->Set(String::New("SOAP"), FunctionTemplate::New(loadSoapLoader));
 	
 	globalTemplate = Persistent<ObjectTemplate>::New(global);	
 	Handle<Context> context = Context::New(NULL, globalTemplate);

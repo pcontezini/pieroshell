@@ -6,44 +6,8 @@
 	objectVersion = 45;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
-		C2021ECD0FEEA68E008B4C90 /* ClassProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2021ECC0FEEA68E008B4C90 /* ClassProxy.cpp */; };
-		C2021F3A0FEEC9ED008B4C90 /* DummyTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2021F390FEEC9ED008B4C90 /* DummyTest.cpp */; };
-		C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20943CB101BEED4009442ED /* HTTPClient.cpp */; };
-		C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22393E41016822900C73EC8 /* XMLElementVector.cpp */; };
-		C22EA89E1176B28A00CB414C /* basic.js in Sources */ = {isa = PBXBuildFile; fileRef = C22EA89A1176B28A00CB414C /* basic.js */; };
-		C22EA89F1176B28A00CB414C /* httpclient.js in Sources */ = {isa = PBXBuildFile; fileRef = C22EA89B1176B28A00CB414C /* httpclient.js */; };
-		C22EA8A01176B28A00CB414C /* pdom.js in Sources */ = {isa = PBXBuildFile; fileRef = C22EA89C1176B28A00CB414C /* pdom.js */; };
-		C2555251116C00DD004E7B76 /* XMLAttributeVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */; };
-		C274AC640FED355C00E936CC /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C274AC630FED355C00E936CC /* libv8.a */; };
-		C274AC6C0FED36C600E936CC /* shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274AC6B0FED36C600E936CC /* shell.cpp */; };
-		C274AC740FED3D6500E936CC /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274AC730FED3D6500E936CC /* GlobalFunctions.cpp */; };
-		C274ACC40FED591C00E936CC /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C274ACC30FED591C00E936CC /* File.cpp */; };
-		C27C78DA0FFEBA8D00CFCF6A /* libpdom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */; };
-		C27F0480100EA31E001C5302 /* XMLElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C27F047F100EA31E001C5302 /* XMLElement.cpp */; };
-		C281DDF0116AE41200F6D8A6 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C281DDEF116AE41200F6D8A6 /* libxml2.2.dylib */; };
-		C2A3A66D10B8A27C008D8515 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */; };
-		C2AFE6580FF41E1200919DF3 /* TemplateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2AFE6570FF41E1200919DF3 /* TemplateManager.cpp */; };
-		C2C9361A0FF195D0006828D8 /* XML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C936190FF195D0006828D8 /* XML.cpp */; };
-		C2DC46E1101137C100FB56A7 /* XMLAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2DC46E0101137C100FB56A7 /* XMLAttribute.cpp */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8DD76F690486A84900D96B5E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8DD76F6C0486A84900D96B5E /* pshell */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pshell; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2021ECB0FEEA68E008B4C90 /* ClassProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassProxy.h; sourceTree = "<group>"; };
 		C2021ECC0FEEA68E008B4C90 /* ClassProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassProxy.cpp; sourceTree = "<group>"; };
 		C2021F380FEEC9ED008B4C90 /* DummyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyTest.h; sourceTree = "<group>"; };
@@ -59,6 +23,9 @@
 		C22EA89D1176B28A00CB414C /* test.cgi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.cgi; path = tests/test.cgi; sourceTree = "<group>"; };
 		C255524F116C00DD004E7B76 /* XMLAttributeVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLAttributeVector.h; sourceTree = "<group>"; };
 		C2555250116C00DD004E7B76 /* XMLAttributeVector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLAttributeVector.cpp; sourceTree = "<group>"; };
+		C2698B6F1177CADF00CE8904 /* SoapLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapLoader.h; sourceTree = "<group>"; };
+		C2698B701177CADF00CE8904 /* SoapLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoapLoader.cpp; sourceTree = "<group>"; };
+		C2698B9E1177FC1D00CE8904 /* libbeersoap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbeersoap.dylib; path = /Users/pcontezini/devel/beersoap/libbeersoap.dylib; sourceTree = "<absolute>"; };
 		C274AC630FED355C00E936CC /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = v8/xcodebuild/Debug/libv8.a; sourceTree = "<group>"; };
 		C274AC6A0FED36C600E936CC /* shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shell.h; sourceTree = "<group>"; };
 		C274AC6B0FED36C600E936CC /* shell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shell.cpp; sourceTree = "<group>"; };
@@ -67,6 +34,8 @@
 		C274AC730FED3D6500E936CC /* GlobalFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlobalFunctions.cpp; sourceTree = "<group>"; };
 		C274ACC20FED591C00E936CC /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
 		C274ACC30FED591C00E936CC /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		C2750B3C117BAA1B00E23BFA /* SoapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapService.h; sourceTree = "<group>"; };
+		C2750B3D117BAA1B00E23BFA /* SoapService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoapService.cpp; sourceTree = "<group>"; };
 		C27C78D90FFEBA8D00CFCF6A /* libpdom.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpdom.dylib; path = ../pdom/libpdom.dylib; sourceTree = SOURCE_ROOT; };
 		C27F047E100EA31E001C5302 /* XMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElement.h; sourceTree = "<group>"; };
 		C27F047F100EA31E001C5302 /* XMLElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLElement.cpp; sourceTree = "<group>"; };
@@ -79,20 +48,6 @@
 		C2DC46DF101137C100FB56A7 /* XMLAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLAttribute.h; sourceTree = "<group>"; };
 		C2DC46E0101137C100FB56A7 /* XMLAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLAttribute.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		8DD76F660486A84900D96B5E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C274AC640FED355C00E936CC /* libv8.a in Frameworks */,
-				C27C78DA0FFEBA8D00CFCF6A /* libpdom.dylib in Frameworks */,
-				C2A3A66D10B8A27C008D8515 /* libcurl.4.dylib in Frameworks */,
-				C281DDF0116AE41200F6D8A6 /* libxml2.2.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* pshell */ = {
@@ -127,7 +82,6 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DD76F6C0486A84900D96B5E /* pshell */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +101,10 @@
 		C22EA9041176B6C500CB414C /* BeerSoap */ = {
 			isa = PBXGroup;
 			children = (
+				C2698B6F1177CADF00CE8904 /* SoapLoader.h */,
+				C2698B701177CADF00CE8904 /* SoapLoader.cpp */,
+				C2750B3C117BAA1B00E23BFA /* SoapService.h */,
+				C2750B3D117BAA1B00E23BFA /* SoapService.cpp */,
 			);
 			name = BeerSoap;
 			sourceTree = "<group>";
@@ -215,6 +173,7 @@
 				C274AC630FED355C00E936CC /* libv8.a */,
 				C2A3A66C10B8A27C008D8515 /* libcurl.4.dylib */,
 				C281DDEF116AE41200F6D8A6 /* libxml2.2.dylib */,
+				C2698B9E1177FC1D00CE8904 /* libbeersoap.dylib */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -228,26 +187,21 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		8DD76F620486A84900D96B5E /* pshell */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "pshell" */;
+/* Begin PBXLegacyTarget section */
+		C2750B27117BA71C00E23BFA /* Make */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = C2750B2F117BA72000E23BFA /* Build configuration list for PBXLegacyTarget "Make" */;
 			buildPhases = (
-				8DD76F640486A84900D96B5E /* Sources */,
-				8DD76F660486A84900D96B5E /* Frameworks */,
-				8DD76F690486A84900D96B5E /* CopyFiles */,
 			);
-			buildRules = (
-			);
+			buildToolPath = /usr/bin/make;
 			dependencies = (
 			);
-			name = pshell;
-			productInstallPath = "$(HOME)/bin";
-			productName = pshell;
-			productReference = 8DD76F6C0486A84900D96B5E /* pshell */;
-			productType = "com.apple.product-type.tool";
+			name = Make;
+			passBuildSettingsInEnvironment = 1;
+			productName = Make;
 		};
-/* End PBXNativeTarget section */
+/* End PBXLegacyTarget section */
 
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
@@ -259,94 +213,31 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DD76F620486A84900D96B5E /* pshell */,
+				C2750B27117BA71C00E23BFA /* Make */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		8DD76F640486A84900D96B5E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
-				C274AC6C0FED36C600E936CC /* shell.cpp in Sources */,
-				C274AC740FED3D6500E936CC /* GlobalFunctions.cpp in Sources */,
-				C274ACC40FED591C00E936CC /* File.cpp in Sources */,
-				C2021ECD0FEEA68E008B4C90 /* ClassProxy.cpp in Sources */,
-				C2021F3A0FEEC9ED008B4C90 /* DummyTest.cpp in Sources */,
-				C2C9361A0FF195D0006828D8 /* XML.cpp in Sources */,
-				C2AFE6580FF41E1200919DF3 /* TemplateManager.cpp in Sources */,
-				C27F0480100EA31E001C5302 /* XMLElement.cpp in Sources */,
-				C2DC46E1101137C100FB56A7 /* XMLAttribute.cpp in Sources */,
-				C22393E51016822900C73EC8 /* XMLElementVector.cpp in Sources */,
-				C20943CC101BEED4009442ED /* HTTPClient.cpp in Sources */,
-				C2555251116C00DD004E7B76 /* XMLAttributeVector.cpp in Sources */,
-				C22EA89E1176B28A00CB414C /* basic.js in Sources */,
-				C22EA89F1176B28A00CB414C /* httpclient.js in Sources */,
-				C22EA8A01176B28A00CB414C /* pdom.js in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
 /* Begin XCBuildConfiguration section */
-		1DEB923208733DC60010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CONFIGURATION_BUILD_DIR = "${BUILD_DIR}";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_GLIBCXX_DEBUG=1",
-					"_GLIBCXX_DEBUG_PEDANTIC=1",
-				);
-				INSTALL_PATH = /usr/local/bin;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/v8/xcodebuild/Debug\"",
-					"\"$(SRCROOT)/../pdom\"",
-				);
-				PRODUCT_NAME = pshell;
-				SYMROOT = "${PROJECT_DIR}";
-			};
-			name = Debug;
-		};
-		1DEB923308733DC60010E9CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_MODEL_TUNING = G5;
-				INSTALL_PATH = /usr/local/bin;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/v8/xcodebuild/Debug\"",
-					"\"$(SRCROOT)/../pdom\"",
-				);
-				PRODUCT_NAME = pshell;
-			};
-			name = Release;
-		};
 		1DEB923608733DC60010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CONFIGURATION_BUILD_DIR = "${PROJECT_PATH}";
-				FRAMEWORK_SEARCH_PATHS = "~/devel/pdom//**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"~/devel/beersoap",
+					"~/devel/pdom//**",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/usr/include/libxml2/**",
+					../beersoap,
 					../pdom,
 				);
-				LD_RUNPATH_SEARCH_PATHS = "~/devel/pdom";
+				LD_RUNPATH_SEARCH_PATHS = "~/devel/beersoap ~/devel/pdom";
 				OBJROOT = "$(PROJECT_DIR)/build";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -374,23 +265,44 @@
 			};
 			name = Release;
 		};
+		C2750B28117BA71C00E23BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Make;
+			};
+			name = Debug;
+		};
+		C2750B29117BA71C00E23BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Make;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "pshell" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DEB923208733DC60010E9CD /* Debug */,
-				1DEB923308733DC60010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "pshell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB923608733DC60010E9CD /* Debug */,
 				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2750B2F117BA72000E23BFA /* Build configuration list for PBXLegacyTarget "Make" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2750B28117BA71C00E23BFA /* Debug */,
+				C2750B29117BA71C00E23BFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

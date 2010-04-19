@@ -26,7 +26,7 @@ WriteMemoryCallback(void *ptr, size_t size, size_t nmemb, void *data)
 {
 	//	printf("passou aqui\n");
 	size_t realsize = size * nmemb;
-	struct MemoryStruct *mem = (struct MemoryStruct *)data;
+	struct HttpMemoryStruct *mem = (struct HttpMemoryStruct *)data;
 	
 	mem->memory = (char *)curlRealloc(mem->memory, mem->size + realsize + 1);
 	if (mem->memory) {
