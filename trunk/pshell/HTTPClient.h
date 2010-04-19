@@ -15,7 +15,7 @@
 #include "global.h"
 #include "ClassProxy.h"
 
-struct MemoryStruct {
+struct HttpMemoryStruct {
 	char *memory;
 	size_t size;
 };
@@ -25,7 +25,7 @@ private:
 	CURL *curl;
 	CURLcode res;
 	struct curl_slist *headerList;
-	struct MemoryStruct chunk;
+	struct HttpMemoryStruct chunk;
 public:
 	HTTPClient(string contentType = "text/html");
 	~HTTPClient();

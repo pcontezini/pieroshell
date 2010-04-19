@@ -8,8 +8,8 @@
 int main (int argc, char* argv[]) {
 	Shell *shell = Shell::Instance();
 	
-	File *file = new File();
-	DummyTest *dummy = new DummyTest();
+//	File *file = new File();
+//	DummyTest *dummy = new DummyTest();
 	
 //	XML *newXML = new XML("");
 	

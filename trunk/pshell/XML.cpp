@@ -224,7 +224,7 @@ XMLElement *XML::newElement(std::string name) {
 
 void XML::parseChildren(xmlDocPtr doc, xmlNodePtr child, DomElement *parent) {
 	xmlNode *cur_node = NULL;
-	XMLElement *new_element;
+	XMLElement *new_element = NULL;
 	xmlAttrPtr attr;
 		
 	for(cur_node = child ; cur_node ; cur_node = cur_node->next ) {
@@ -258,8 +258,9 @@ DomAttribute *XML::setAttribute(const std::string& name, const std::string& valu
 	new_attribute = new XMLAttribute(name,value);
 //	printf("aqui\n");
 //	attributes.push_back((DomAttribute *)new_attribute); // BUG
-	attributes.push_back(dynamic_cast<DomAttribute *>(new_attribute));
-//	printf("ali\n");	
+//	attributes.push_back(dynamic_cast<DomAttribute *>(new_attribute));
+//	printf("ali\n");
+	pushAttribute(new_attribute);
 	return((DomAttribute *)new_attribute);
 }
 	
