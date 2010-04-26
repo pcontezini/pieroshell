@@ -26,12 +26,14 @@ Shell::Shell() {
 	global->Set(String::New("print"), FunctionTemplate::New(Print));
 	global->Set(String::New("read"), FunctionTemplate::New(Read));
 	global->Set(String::New("load"), FunctionTemplate::New(Load));
+	global->Set(String::New("include"), FunctionTemplate::New(Load));
 	global->Set(String::New("quit"), FunctionTemplate::New(Quit));
 	global->Set(String::New("version"), FunctionTemplate::New(Version));
 	
 	global->Set(String::New("XML"), FunctionTemplate::New(loadXML));
 	global->Set(String::New("HTTPClient"), FunctionTemplate::New(loadHTTPClient));
 	global->Set(String::New("SOAP"), FunctionTemplate::New(loadSoapLoader));
+	global->Set(String::New("File"), FunctionTemplate::New(loadFile));
 	
 	globalTemplate = Persistent<ObjectTemplate>::New(global);	
 	Handle<Context> context = Context::New(NULL, globalTemplate);
