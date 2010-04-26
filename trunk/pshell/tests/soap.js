@@ -9,7 +9,6 @@ service = soapLoader.getService(services[0]);
 operations = service.listOperations();
 print(operations);
 
-authenticate = service.getOperation("Authenticate");
+data = service.Authenticate("terminal","terminal");
 
-data = service.Authenticate("login","senha");
-
+print(data.dumpTree());
