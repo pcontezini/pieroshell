@@ -8,21 +8,36 @@
  */
 #ifndef FILE_H
 #define FILE_H
-
-#include "global.h"
 #include <unistd.h>
 #include <fcntl.h>
+#include <errno.h>
 
-class File {
+#include "global.h"
+#include "ClassProxy.h"
+
+#define READ_BUFFER 1024
+
+#define ERROR_FILE_ALREADY_EXISTS 1
+
+class File : public ClassProxy {
 	int defaultUmask;
+	int fd;
+	std::string file;
 public:
-	File();
-	bool create(string file); // cria um novo arquivo
-	bool writeFile(string file, string contents); // sobrescreve o arquivo por esse conteudo
-	bool append(string file, string contents); // adiciona ao fim do arquivo
-	string readFile(string file); // le o conteudo do arquivo
-	bool truncate(string file); // zera o conteudo do arquivo
-	bool remove(string file); // remove
+
+	File(std::string file);
+	~File();
+	Handle<String> getClassName();
+	Handle<Value> Create(const Arguments& args); // cria um novo arquivo
+	Handle<Value> Write(const Arguments& args); // sobrescreve o arquivo por esse conteudo
+//	bool append(string file, string contents); // adiciona ao fim do arquivo
+	Handle<Value> Read(const Arguments& args); // le o conteudo do arquivo
+	Handle<Value> Truncate(const Arguments& args); // zera o conteudo do arquivo
+	Handle<Value> Remove(const Arguments& args); // remove
+	Handle<Value> Exists(const Arguments& args);
+	Handle<Value> Seek(const Arguments& args);
+
+	void registerCallbacks();
 };
 
 #endif

@@ -27,5 +27,6 @@ void ReportException(v8::TryCatch* handler);
 Handle<Value> loadXML(const v8::Arguments& args);
 Handle<Value> loadHTTPClient(const v8::Arguments& args);
 Handle<Value> loadSoapLoader(const v8::Arguments& args);
+Handle<Value> loadFile(const v8::Arguments& args);
 
 #endif

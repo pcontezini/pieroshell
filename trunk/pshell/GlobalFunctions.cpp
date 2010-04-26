@@ -11,6 +11,7 @@
 #include "XML.h"
 #include "HTTPClient.h"
 #include "SoapLoader.h"
+#include "File.h"
 
 // TOTALMENTE copiado do exemplo do V8, afinal pra que reescrever a roda?
 
@@ -239,4 +240,24 @@ Handle<Value> loadSoapLoader(const v8::Arguments& args) {
 		return v8::ThrowException(String::New("Error Loading WSDL File!"));
 	}
 	return(scope.Close(newSoapLoader->registerObject()));
+}
+
+Handle<Value> loadFile(const v8::Arguments& args) {
+	if(!args.IsConstructCall()) {
+		return v8::ThrowException(String::New("Cannot call constructor as a function"));
+	}
+	if (args.Length() != 1) {
+		return v8::ThrowException(String::New("Need the File name!"));
+	}
+	Shell *shell = Shell::Instance();
+	Context::Scope context_scope(shell->globalContext);
+	HandleScope scope;
+	string argument = *String::Utf8Value(args[0]);;
+	File *newFile;
+	try {
+		newFile = new File(argument);
+	} catch(...) {
+		return v8::ThrowException(String::New("Error Opening File!"));
+	}
+	return(scope.Close(newFile->registerObject()));
 }

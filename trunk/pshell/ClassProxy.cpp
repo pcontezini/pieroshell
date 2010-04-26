@@ -9,6 +9,8 @@
 
 #include "ClassProxy.h"
 
+void FreeObject(Persistent<Value> object, void* parameter);
+
 
 ClassProxy::ClassProxy() {
 	shell = Shell::Instance();
